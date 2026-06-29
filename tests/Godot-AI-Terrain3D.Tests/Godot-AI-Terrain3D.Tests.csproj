@@ -36,7 +36,13 @@
   -->
   <ItemGroup>
     <Compile Include="..\..\src\Godot-AI-Terrain3D\Runtime\Tools\Tool_Terrain3D.cs" Link="Source\Tool_Terrain3D.cs" />
-    <Compile Include="..\..\src\Godot-AI-Terrain3D\Runtime\Tools\Tool_Terrain3D.Echo.cs" Link="Source\Tool_Terrain3D.Echo.cs" />
+    <Compile Include="..\..\src\Godot-AI-Terrain3D\Runtime\Tools\Tool_Terrain3D.Ids.cs" Link="Source\Tool_Terrain3D.Ids.cs" />
+    <Compile Include="..\..\src\Godot-AI-Terrain3D\Runtime\Tools\Tool_Terrain3D.Defaults.cs" Link="Source\Tool_Terrain3D.Defaults.cs" />
+    <Compile Include="..\..\src\Godot-AI-Terrain3D\Runtime\Interop\AddonGate.cs" Link="Source\AddonGate.cs" />
+    <Compile Include="..\..\src\Godot-AI-Terrain3D\Runtime\Terrain3D\Terrain3DNames.cs" Link="Source\Terrain3DNames.cs" />
+    <Compile Include="..\..\src\Godot-AI-Terrain3D\Runtime\Terrain3D\Terrain3DDefaults.cs" Link="Source\Terrain3DDefaults.cs" />
+    <Compile Include="..\..\src\Godot-AI-Terrain3D\Runtime\Terrain3D\Terrain3DConfig.cs" Link="Source\Terrain3DConfig.cs" />
+    <Compile Include="..\..\src\Godot-AI-Terrain3D\Runtime\Terrain3D\Terrain3DNodeInfo.cs" Link="Source\Terrain3DNodeInfo.cs" />
   </ItemGroup>
 
 </Project>
