@@ -42,9 +42,11 @@ structured `installed: false` result with an install hint instead of crashing.
 
 | Tool | Kind | Description |
 | --- | --- | --- |
-| `terrain3d-defaults` | pure-managed | Recommended region size / clipmap / LOD starter config. No addon needed. |
-| `terrain3d-create` | editor | Create a `Terrain3D` node (optional name / parent), set its data directory + region size. |
-| `terrain3d-set-height` | editor | Sculpt/set terrain height at a world position via the terrain's data API. |
-| `terrain3d-get-info` | editor | Read a `Terrain3D` node's region count / size / extents (read-only). |
+| `terrain3d-defaults` | pure-managed | Recommended region size / clipmap LOD / data-directory starter config (`small`/`medium`/`large` preset). No addon needed. |
+| `terrain3d-create` | editor | Create a `Terrain3D` node (optional name / parent), optionally seed its region size + data directory. |
+| `terrain3d-set-data-directory` | editor | Set the terrain's `res://` data directory (Terrain3D persists region data on disk — a writable dir is required). |
+| `terrain3d-set-region-size` | editor | Set the terrain region size (snapped to a valid Terrain3D size: 64/128/256/512/1024/2048). |
+| `terrain3d-set-material` | editor | Assign (or create) a `Terrain3DMaterial` on the terrain. |
+| `terrain3d-get` | editor | Read a `Terrain3D` node's scalar config (region size, data directory, version, region count) — read-only. |
 
 License: Apache-2.0.

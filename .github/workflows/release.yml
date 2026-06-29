@@ -49,9 +49,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        # CLASS-B floor: Terrain3D v1.0.2-stable's terrain.gdextension declares compatibility_minimum = 4.4
+        # ("Godot 4.4-4.6+. Use 1.0.0 for 4.3."), so the addon's GDExtension .so cannot load on a 4.3.0
+        # editor — the 4.3.0 e2e leg would red on the first push. Floor pinned at 4.4.1 (drop the 4.3.0 leg).
         include:
-          - godot: "4.3.0"
-            sdk: "4.3.0"
           - godot: "4.4.1"
             sdk: "4.4.1"
           - godot: "4.5.1"

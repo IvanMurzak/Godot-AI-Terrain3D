@@ -118,10 +118,13 @@ jobs:
       #   ADDON_TAG  — the RELEASE TAG to pin (never @latest — keeps the leg reproducible).
       #   ADDON_DIR  — the folder name under testbed/addons/ the addon installs into.
       #   ADDON_KIND — "gdscript" (class_name addon; a copy is enough) or "gdextension" (needs a linux .so).
-      ADDON_REPO: ""
-      ADDON_TAG: ""
-      ADDON_DIR: ""
-      ADDON_KIND: ""
+      # CLASS-B (Terrain3D): a precompiled C++ GDExtension. CI downloads the pinned release zip and unzips
+      # addons/terrain_3d/ (with its linux-x64 .so) into the testbed before --import, so the Terrain3D class
+      # registers in ClassDB and the presence-gated tools run against the real addon. NEVER vendored.
+      ADDON_REPO: "TokisanGames/Terrain3D"
+      ADDON_TAG: "v1.0.2-stable"
+      ADDON_DIR: "terrain_3d"
+      ADDON_KIND: "gdextension"
     steps:
       - uses: actions/checkout@v6
 
