@@ -1,0 +1,33 @@
+src/Godot-AI-Terrain3D/Runtime/Terrain3D/Terrain3DConfig.cs
+  s_e3cea916442b5e::t_e7c761a93467f1 1-42
+src/Godot-AI-Terrain3D/Runtime/Interop/AddonGate.cs
+  s_e3cea916442b5e::t_1b70ea68f52c2a 1-54
+src/Godot-AI-Terrain3D/Runtime/Tools/Tool_Terrain3D.cs
+  s_e3cea916442b5e::t_e6f141ccfc056b 15-22,25,28-32,35-39
+src/Godot-AI-Terrain3D/Runtime/Terrain3D/Terrain3DDefaults.cs
+  s_e3cea916442b5e::t_4727aa3a91c8e4 1-85
+src/Godot-AI-Terrain3D/Runtime/Terrain3D/Terrain3DNames.cs
+  s_e3cea916442b5e::t_d729f4f4dfeaa0 1-135
+src/Godot-AI-Terrain3D/Runtime/Terrain3D/Terrain3DNodeInfo.cs
+  s_e3cea916442b5e::t_2ab04e5fd285c8 1-76
+src/Godot-AI-Terrain3D/Runtime/Tools/Tool_Terrain3D.Ids.cs
+  s_e3cea916442b5e::t_e83c8616ae732b 1-37
+src/Godot-AI-Terrain3D/Runtime/Tools/Tool_Terrain3D.Defaults.cs
+  s_e3cea916442b5e::t_1fb04f59a3bf72 1-48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "0cb665414edebebfb3ba63c082f7b9e616168675",
+  "prompts": {},
+  "sessions": {
+    "s_e3cea916442b5e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c575ab56-73e6-4952-bb8b-fef415924e27",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
