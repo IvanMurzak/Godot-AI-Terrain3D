@@ -1,0 +1,35 @@
+src/Godot-AI-Terrain3D/README.md
+  s_e3cea916442b5e::t_0fc63b6a57c47c 45-50
+tests/e2e/e2e-tools.json
+  s_e3cea916442b5e::t_9df1fa6a12910e 2-10,13-35,38-40
+.github/workflows/release.yml
+  s_f7f38b2890f1da::t_5e8981245641db 52-54
+.github/workflows/test-pull-request.yml
+  s_f7f38b2890f1da::t_a8a587709d8040 17-19
+.github/workflows/test.yml
+  s_f7f38b2890f1da::t_0ad761e4373b74 121-127
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "01bc3532958a900eb271f2cddc71ce818815e0c7",
+  "prompts": {},
+  "sessions": {
+    "s_e3cea916442b5e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c575ab56-73e6-4952-bb8b-fef415924e27",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    },
+    "s_f7f38b2890f1da": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "agent-a11cc0d816dc5f318",
+        "model": "unknown"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}
