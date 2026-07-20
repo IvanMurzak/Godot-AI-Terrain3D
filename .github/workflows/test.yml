@@ -140,7 +140,7 @@ jobs:
           use-dotnet: true
 
       - name: Setup Node (for godot-cli)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: "22"
 
@@ -370,7 +370,7 @@ jobs:
 
       - name: Upload e2e logs on failure
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: e2e-godot-${{ inputs.godot-version }}-logs
           path: |
