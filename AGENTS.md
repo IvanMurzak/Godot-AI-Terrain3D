@@ -13,8 +13,7 @@ Terrain3D is a third-party precompiled C++ **GDExtension** whose classes are NOT
 package must not depend on it:
 
 - **No compile-time dependency.** Reference Terrain3D classes **by string name only**, resolved at runtime.
-  `dotnet build -c Debug` MUST exit 0 with the addon ABSENT (the no-dependency gate; CI also asserts the
-  nuspec).
+  `dotnet build -c Debug` MUST exit 0 with the addon ABSENT (the no-dependency gate).
 - **Resolution:** a GDExtension registers its classes in `ClassDB` (not the GDScript global-class list):
   resolve via `ClassDB.ClassExists` / `ClassDB.Instantiate`.
 - **Presence gate first.** Every editor tool's first action inside `MainThread.Instance.Run(...)` checks
@@ -57,15 +56,14 @@ Terrain3D persists regions to a **writable data directory** (not just the scene)
 
 ## Tools
 
-Ids live in `Runtime/Tools/Tool_Terrain3D.Ids.cs` (the source of truth). Each tool is one partial-class file
-named after it: pure-managed under `Runtime/Tools/`, editor tools under `Editor/Tools/`. Current tools:
-`terrain3d-defaults` (pure-managed), `terrain3d-create`, `terrain3d-set-data-directory`,
-`terrain3d-set-region-size`, `terrain3d-set-material`, `terrain3d-get`.
+Ids live in `Runtime/Tools/Tool_Terrain3D.Ids.cs` (the source of truth). Current tools: `terrain3d-defaults`
+(pure-managed), `terrain3d-create`, `terrain3d-set-data-directory`, `terrain3d-set-region-size`,
+`terrain3d-set-material`, `terrain3d-get`.
 
 ## Build / test (no Godot binary, addon absent)
 
 ```bash
-dotnet build src/Godot-AI-Terrain3D/Godot-AI-Terrain3D.csproj  # source-only package compiles tools (addon NOT needed)
+dotnet build src/Godot-AI-Terrain3D/Godot-AI-Terrain3D.csproj  # source-only package compiles tools
 dotnet test  tests/Godot-AI-Terrain3D.Tests/Godot-AI-Terrain3D.Tests.csproj
 dotnet pack  src/Godot-AI-Terrain3D/Godot-AI-Terrain3D.csproj -p:Version=0.0.0-ci -o local-nuget
 dotnet build testbed/Terrain3D-Testbed.csproj                  # consumes the local package (injection proof)
@@ -83,7 +81,7 @@ the testbed, or you silently build the stale cached source.
 - Root namespace `com.IvanMurzak.Godot.MCP.Terrain3D`. Every `.cs` starts with the Apache-2.0 header.
 - Pure-managed code (tool ids, the `AddonGateResult` shape, name/enum-int constants, defaults) → `Runtime/`
   (outside `#if TOOLS`, unit-testable); editor-driving tools + `AddonInterop` → `#if TOOLS` (every Godot call
-  via `MainThread.Instance.Run(...)`, presence gate first, E2E-verified).
+  via `MainThread.Instance.Run(...)`, E2E-verified).
 - **Namespace shadow:** the root namespace contains `com.IvanMurzak.Godot`, so an inline `Godot.`-qualified
   type binds to that ancestor, not the engine — write `global::Godot.Collections.Dictionary` or import via
   `using Godot.Collections;`. Plain `using Godot;` + unqualified `Node`/`ClassDB` are unaffected.
