@@ -88,7 +88,7 @@ asserts the presence-gated results.
 
 - `docs/source-only-nuget-recipe.md` — the packaging recipe (the centerpiece).
 - `docs/ci.md` — workflows, the version gate, the multi-Godot matrix, required secrets.
-- `CLAUDE.md` — maintainer notes (incl. the addon-dependent / presence-gate model).
+- `AGENTS.md` — agent / maintainer notes (incl. the addon-dependent / presence-gate model).
 
 ## Publish
 
